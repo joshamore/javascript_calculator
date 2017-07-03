@@ -8,30 +8,49 @@ var model = {
 
 // Does the calculations and updates model data.
 var controller = {
+    // Function to add number on user click.
     addNum: function(num) {
+        // Checks if a returned number is currently displayed.
+        // If so, it clears the current string as the user has just
+        // attempted to start a new number.
         if (model.updatedLastAction === true) {
             model.updatedLastAction = false;
             this.clear();
         }
         
+        // Inputted number is added directly to currentNum string
+        // if currently empty. Updates displayed string in DOM.
         if (model.currentNum === null) {
             model.currentNum = num;
             display.updateNum();
-        } else {
+        } 
+        // If currentNum not null, the inputted number is
+        // added the the end of the current number string.
+        // Updates displayed string in DOM.
+        else {
             model.currentNum = model.currentNum + num;
             display.updateNum();
         }
     },
+    // Function to add decimal point on user click.
     addDot: function() {
+        // Checks if a returned number is currently displayed.
+        // If so, it clears the current string as the user has just
+        // attempted to start a new number.
         if (model.updatedLastAction === true) {
             model.updatedLastAction = false;
             this.clear();
         }
         
+        // Dot is added directly to currentNum string if
+        // currently empty. Updates displayed string in DOM.
         if (model.currentNum === null) {
             model.currentNum = ".";
             display.updateNum();
-        } else if (!model.currentNum.includes(".")) {
+        } 
+        // Checkes to make sure two decimal points are not
+        // added to a number. If non present, one is added on click.
+        else if (!model.currentNum.includes(".")) {
             model.currentNum = model.currentNum + ".";
             display.updateNum();
         }
