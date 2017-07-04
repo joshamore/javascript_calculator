@@ -55,6 +55,7 @@ var controller = {
             display.updateNum();
         }
     },
+    // Returns the calculation of two numbers on user click.
     equals: function() {
         // Error check to ensure equals will work correctly.
         if (model.currentNum === null || model.toEvaluate === null) {
@@ -62,12 +63,23 @@ var controller = {
             return;
         }
         
+        // Adds the most recent string input to previous string input
+        // for calculation.
         model.toEvaluate = model.toEvaluate + model.currentNum;
+        // Performs the calculation using the eval() function.
         model.equalsNum = eval(model.toEvaluate);
+        // Sets currentNum to the returned calculation.
         model.currentNum = model.equalsNum;
+        
+        // Values are reset.
         model.toEvaluate = null;
         model.equalsNum = null;
+        
+        // Updates variable to true, which allows functions
+        // to determine if currentNum is a returned value.
         model.updatedLastAction = true;
+        
+        // Updates DOM.
         display.updateNum();
     },
     clear: function() {
