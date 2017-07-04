@@ -56,6 +56,12 @@ var controller = {
         }
     },
     equals: function() {
+        // Error check to ensure equals will work correctly.
+        if (model.currentNum === null || model.toEvaluate === null) {
+            console.log("Please input a number, a math function, and a second number before pressing equals.");
+            return;
+        }
+        
         model.toEvaluate = model.toEvaluate + model.currentNum;
         model.equalsNum = eval(model.toEvaluate);
         model.currentNum = model.equalsNum;
