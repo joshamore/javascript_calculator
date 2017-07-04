@@ -1,8 +1,12 @@
+/*
+Color Scheme: https://coolors.co/e9b000-e24e42-eb6e80-008f95-c9daea
+*/
+
 /******************************
 Body
 ******************************/
 body {
-    background-color: aqua;
+    background-color: #008F95;
 }
 
 
@@ -13,11 +17,11 @@ Calculator
     display: block;
     border-radius: 10%;
     margin: 0 auto;
-    background-color: #575859;
+    background-color: #EB6E80;
     width: 300px;
-    height: 470px;
+    height: 500px;
     border: 1px solid black;
-    box-shadow: 5px 5px 5px grey;
+    box-shadow: 5px 5px 5px #000000;
 }
 #calcHeader {
     font-size: 0.8em;
@@ -32,7 +36,6 @@ Number Displays
 .numDisplay {
     padding-left: 80px;
     margin-bottom: 10px;
-    border: 1px solid white;
 }
 #toEvalDisplay {
     font-size: 0.8rem;
@@ -46,10 +49,12 @@ Math Function Buttons
 .mathInput {
     display: inline-block;
     text-align: center;
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
     margin: 10px;
-    border: 1px solid black;
+    border: 1.5px solid black;
+    border-radius: 20%;
+    background-color: #C9DAEA;
 }
 #mathBtns {
     display: flex;
@@ -64,27 +69,33 @@ Input Buttons
 .numberInput {
     display: inline-block;
     text-align: center;
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
     margin: 10px;
-    border: 1px solid black;
+    border: 1.5px solid black;
+    border-radius: 20%;
+    background-color: #E9B000;
 }
 #numbers {
-    margin-left: 70px;
+    margin-left: 55px;
 }
 #equals {
     display: inline-block;
     text-align: center;
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
     margin: 10px;
-    border: 1px solid black;
+    border: 1.5px solid black;
+    border-radius: 20%;
+    background-color: #C9DAEA;
 }
 #clear {
     display: inline-block;
     text-align: center;
-    width: 85px;
-    height: 30px;
+    width: 105px;
+    height: 40px;
     margin: 10px;
-    border: 1px solid black;
+    border: 1.5px solid black;
+    border-radius: 15%;
+    background-color: #E24E42;
 }
