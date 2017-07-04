@@ -1,17 +1,21 @@
+/******************************
+Body
+******************************/
 body {
     background-color: aqua;
 }
 
-/**************
+
+/******************************
 Calculator
-**************/
+******************************/
 #calculatorBody {
     display: block;
     border-radius: 10%;
     margin: 0 auto;
     background-color: #575859;
     width: 300px;
-    height: 450px;
+    height: 470px;
     border: 1px solid black;
     box-shadow: 5px 5px 5px grey;
 }
@@ -22,12 +26,12 @@ Calculator
 }
 
 
-/**************
+/******************************
 Number Displays
-**************/
+******************************/
 .numDisplay {
     padding-left: 80px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     border: 1px solid white;
 }
 #toEvalDisplay {
@@ -36,33 +40,41 @@ Number Displays
 }
 
 
-/**************
+/******************************
 Math Function Buttons
-**************/
-#mathBtns {
-    margin-left: 40px;
-}
+******************************/
 .mathInput {
     display: inline-block;
+    text-align: center;
     width: 30px;
     height: 30px;
     margin: 10px;
     border: 1px solid black;
 }
-
-
-#numbers {
-    margin-left: 80px;
+#mathBtns {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+
+
+/******************************
+Input Buttons
+******************************/
 .numberInput {
     display: inline-block;
+    text-align: center;
     width: 30px;
     height: 30px;
     margin: 10px;
     border: 1px solid black;
+}
+#numbers {
+    margin-left: 70px;
 }
 #equals {
     display: inline-block;
+    text-align: center;
     width: 30px;
     height: 30px;
     margin: 10px;
@@ -70,6 +82,7 @@ Math Function Buttons
 }
 #clear {
     display: inline-block;
+    text-align: center;
     width: 85px;
     height: 30px;
     margin: 10px;
