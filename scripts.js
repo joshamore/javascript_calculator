@@ -196,10 +196,10 @@ var elements = {
     num0: document.getElementById("num0"),
     clear: document.getElementById("clear"),
     dot: document.getElementById("dot"),
-    addtion: document.getElementById("additionBtn"),
-    minus: document.getElementById("minusBtn"),
-    multiply: document.getElementById("multiplyBtn"),
-    divide: document.getElementById("divideBtn"),
+    addtion: document.getElementById("addition"),
+    minus: document.getElementById("minus"),
+    multiply: document.getElementById("multiply"),
+    divide: document.getElementById("divide"),
     equals: document.getElementById("equals")
 };
 

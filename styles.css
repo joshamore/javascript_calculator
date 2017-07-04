@@ -2,7 +2,9 @@ body {
     background-color: aqua;
 }
 
-
+/**************
+Calculator
+**************/
 #calculatorBody {
     display: block;
     border-radius: 10%;
@@ -13,17 +15,20 @@ body {
     border: 1px solid black;
     box-shadow: 5px 5px 5px grey;
 }
-
-
-.numDisplay {
-    padding-left: 80px;
-    margin-bottom: 20px;
-    border: 1px solid white;
-}
 #calcHeader {
     font-size: 0.8em;
     text-align: center;
     font-family: sans-serif;
+}
+
+
+/**************
+Number Displays
+**************/
+.numDisplay {
+    padding-left: 80px;
+    margin-bottom: 20px;
+    border: 1px solid white;
 }
 #toEvalDisplay {
     font-size: 0.8rem;
@@ -31,6 +36,9 @@ body {
 }
 
 
+/**************
+Math Function Buttons
+**************/
 #mathBtns {
     margin-left: 40px;
 }
