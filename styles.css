@@ -7,6 +7,7 @@ Body
 ******************************/
 body {
     background-color: #008F95;
+    font-family: "Robot Mono", monospace;
 }
 
 
@@ -24,9 +25,8 @@ Calculator
     box-shadow: 5px 5px 5px #000000;
 }
 #calcHeader {
-    font-size: 0.8em;
     text-align: center;
-    font-family: sans-serif;
+    font-size: 0.8rem;
 }
 
 
