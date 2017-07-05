@@ -63,6 +63,10 @@ Math Function Buttons
     border: 1.5px solid black;
     border-radius: 20%;
     background-color: #C9DAEA;
+    box-shadow: 0 5px 2px -2px grey;
+}
+.mathInput:active {
+    box-shadow: none;
 }
 #mathBtns {
     display: flex;
@@ -83,6 +87,10 @@ Input Buttons
     border: 1.5px solid black;
     border-radius: 20%;
     background-color: #E9B000;
+    box-shadow: 0 5px 2px -2px grey;
+}
+.numberInput:active {
+    box-shadow: none;
 }
 #numbers {
     margin-left: 50px;
@@ -96,6 +104,10 @@ Input Buttons
     border: 1.5px solid black;
     border-radius: 20%;
     background-color: #C9DAEA;
+    box-shadow: 0 5px 2px -2px grey;
+}
+#equals:active {
+    box-shadow: none;
 }
 #clear {
     display: inline-block;
@@ -106,6 +118,10 @@ Input Buttons
     border: 1.5px solid black;
     border-radius: 15%;
     background-color: #E24E42;
+    box-shadow: 0 5px 2px -2px grey;
+}
+#numberInput:active {
+    box-shadow: none;
 }
 
 
