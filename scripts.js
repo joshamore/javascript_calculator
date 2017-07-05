@@ -97,11 +97,11 @@ var controller = {
             console.log("currentNum cannot be null");
             return;
         } else if (model.toEvaluate === null) {
-            model.toEvaluate = model.currentNum + " +";
+            model.toEvaluate = model.currentNum + " + ";
             model.currentNum = null;
             display.updateNum();
         } else {
-            model.toEvaluate = model.toEvaluate + model.currentNum + " +";
+            model.toEvaluate = model.toEvaluate + model.currentNum + " + ";
             model.currentNum = null;
             display.updateNum();
         }
@@ -115,11 +115,11 @@ var controller = {
             console.log("currentNum cannot be null");
             return;
         } else if (model.toEvaluate === null) {
-            model.toEvaluate = model.currentNum + " -";
+            model.toEvaluate = model.currentNum + " - ";
             model.currentNum = null;
             display.updateNum();
         } else {
-            model.toEvaluate = model.toEvaluate + model.currentNum + " -";
+            model.toEvaluate = model.toEvaluate + model.currentNum + " - ";
             model.currentNum = null;
             display.updateNum();
         }
@@ -133,11 +133,11 @@ var controller = {
             console.log("currentNum cannot be null");
             return;
         } else if (model.toEvaluate === null) {
-            model.toEvaluate = model.currentNum + " *";
+            model.toEvaluate = model.currentNum + " * ";
             model.currentNum = null;
             display.updateNum();
         } else {
-            model.toEvaluate = model.toEvaluate + model.currentNum + " *";
+            model.toEvaluate = model.toEvaluate + model.currentNum + " * ";
             model.currentNum = null;
             display.updateNum();
         }
@@ -151,11 +151,11 @@ var controller = {
             console.log("currentNum cannot be null");
             return;
         } else if (model.toEvaluate === null) {
-            model.toEvaluate = model.currentNum + " /";
+            model.toEvaluate = model.currentNum + " / ";
             model.currentNum = null;
             display.updateNum();
         } else {
-            model.toEvaluate = model.toEvaluate + model.currentNum + " /";
+            model.toEvaluate = model.toEvaluate + model.currentNum + " / ";
             model.currentNum = null;
             display.updateNum();
         }
