@@ -1,4 +1,6 @@
-// Holds required data.
+/*
+    Holds data for the calculator.
+*/
 var model = {
     updatedLastAction: false,
     currentNum: null,
@@ -6,80 +8,53 @@ var model = {
     equalsNum: null,
 };
 
-// Does the calculations and updates model data.
+/*
+    Performs calculations and updates model data where applicable. Also calls display methods.
+*/
 var controller = {
-    // Function to add number on user click.
     addNum: function(num) {
-        // Checks if a returned number is currently displayed.
-        // If so, it clears the current string as the user has just
-        // attempted to start a new number.
         if (model.updatedLastAction === true) {
             model.updatedLastAction = false;
             this.clear();
         }
         
-        // Inputted number is added directly to currentNum string
-        // if currently empty. Updates displayed string in DOM.
         if (model.currentNum === null) {
             model.currentNum = num;
             display.updateNum();
-        } 
-        // If currentNum not null, the inputted number is
-        // added the the end of the current number string.
-        // Updates displayed string in DOM.
-        else {
+        } else {
             model.currentNum = model.currentNum + num;
             display.updateNum();
         }
     },
-    // Function to add decimal point on user click.
     addDot: function() {
-        // Checks if a returned number is currently displayed.
-        // If so, it clears the current string as the user has just
-        // attempted to start a new number.
         if (model.updatedLastAction === true) {
             model.updatedLastAction = false;
             this.clear();
         }
         
-        // Dot is added directly to currentNum string if
-        // currently empty. Updates displayed string in DOM.
         if (model.currentNum === null) {
             model.currentNum = ".";
             display.updateNum();
-        } 
-        // Checkes to make sure two decimal points are not
-        // added to a number. If non present, one is added on click.
-        else if (!model.currentNum.includes(".")) {
+        } else if (!model.currentNum.includes(".")) {
             model.currentNum = model.currentNum + ".";
             display.updateNum();
         }
     },
-    // Returns the calculation of two numbers on user click.
     equals: function() {
-        // Error check to ensure equals will work correctly.
         if (model.currentNum === null || model.toEvaluate === null) {
             console.log("Please input a number, a math function, and a second number before pressing equals.");
             return;
         }
         
-        // Adds the most recent string input to previous string input
-        // for calculation.
         model.toEvaluate = model.toEvaluate + model.currentNum;
-        // Performs the calculation using the eval() function.
         model.equalsNum = eval(model.toEvaluate);
-        // Sets currentNum to the returned calculation.
         model.currentNum = model.equalsNum;
         
-        // Values are reset.
         model.toEvaluate = null;
         model.equalsNum = null;
         
-        // Updates variable to true, which allows functions
-        // to determine if currentNum is a returned value.
         model.updatedLastAction = true;
         
-        // Updates DOM.
         display.updateNum();
     },
     clear: function() {
@@ -162,11 +137,11 @@ var controller = {
     }
 };
 
-// changes the DOM
+/*
+    These methods make changes to the DOM.
+*/
 var display = {
-    // updateNum function fine.
     updateNum: function() {
-        // for current number
         if (model.currentNum === null) {
             elements.numberDisplay.innerHTML = ("-");
         } else {
@@ -181,6 +156,9 @@ var display = {
     }
 };
 
+/*
+    Pulling in DOM IDs.
+*/
 var elements = {
     numberDisplay: document.getElementById("numberDisplay"),
     toEvalDisplay: document.getElementById("toEvalDisplay"),
@@ -203,6 +181,9 @@ var elements = {
     equals: document.getElementById("equals")
 };
 
+/*
+    Triggers based on user interaction.
+*/
 var events = {
     clicked1: elements.num1.addEventListener("click", function() {
         controller.addNum("1")
