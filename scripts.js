@@ -1,7 +1,7 @@
 /*
     Holds data for the calculator.
 */
-var model = {
+let model = {
     updatedLastAction: false,
     currentNum: null,
     toEvaluate: null,
@@ -11,7 +11,7 @@ var model = {
 /*
     Performs calculations and updates model data where applicable. Also calls display methods.
 */
-var controller = {
+const controller = {
     addNum: function(num) {
         if (model.updatedLastAction === true) {
             model.updatedLastAction = false;
@@ -140,7 +140,7 @@ var controller = {
 /*
     These methods make changes to the DOM.
 */
-var display = {
+const display = {
     updateNum: function() {
         if (model.currentNum === null) {
             elements.numberDisplay.innerHTML = ("-");
@@ -159,7 +159,7 @@ var display = {
 /*
     Pulling in DOM IDs.
 */
-var elements = {
+const elements = {
     numberDisplay: document.getElementById("numberDisplay"),
     toEvalDisplay: document.getElementById("toEvalDisplay"),
     num1: document.getElementById("num1"),
@@ -184,7 +184,7 @@ var elements = {
 /*
     Triggers based on user interaction.
 */
-var events = {
+const events = {
     clicked1: elements.num1.addEventListener("click", function() {
         controller.addNum("1")
     }),
